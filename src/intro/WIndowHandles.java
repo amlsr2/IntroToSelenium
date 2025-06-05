@@ -12,7 +12,7 @@ public class WIndowHandles {
 
 // TODO Auto-generated method stub
 
-		System.setProperty("webdriver.chrome.driver", "D:\\Selenium\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\amelia sari\\eclipse-workspace\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
 		driver.get("https://rahulshettyacademy.com/loginpagePractise/#");
 
@@ -31,7 +31,5 @@ public class WIndowHandles {
 		String emailId = driver.findElement(By.cssSelector(".im-para.red")).getText().split("at")[1].trim().split(" ")[0];
 		driver.switchTo().window(parentId);
 		driver.findElement(By.id("username")).sendKeys(emailId);
-
 	}
-
 }

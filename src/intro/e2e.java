@@ -6,23 +6,22 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 
 public class e2e {
-
+	
 	public static void main(String[] args) throws InterruptedException {
 
 		// TODO Auto-generated method stub
-		System.setProperty("webdriver.chrome.driver", "D:\\Selenium\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\amelia sari\\eclipse-workspace\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
-		driver.get("https://rahulshettyacademy.com/dropdownsPractise/"); // URL in the browser
+		driver.get("https://rahulshettyacademy.com/dropdownsPractise/");
 
-		// driver.findElement(By.id("ctl00_mainContent_rbtnl_Trip_0")).click();
 		driver.findElement(By.id("ctl00_mainContent_ddl_originStation1_CTXT")).click();
 		driver.findElement(By.xpath("//a[@value='DEL']")).click();
 		Thread.sleep(2000);
 
 		driver.findElement(By.xpath("//div[@id='glsctl00_mainContent_ddl_destinationStation1_CTNR'] //a[@value='MAA']"))
 				.click();
-		// driver.findElement(By.cssSelector(".ui-state-default.ui-state-highlight")).click();
-		driver.findElement(By.xpath("//a[text()='20']")).click(); // pilih tanggal 20
+
+		driver.findElement(By.xpath("//a[text()='20']")).click();
 
 		if (driver.findElement(By.id("Div1")).getDomAttribute("style").contains("0.5")) {
 			System.out.println("its disabled");
@@ -44,10 +43,9 @@ public class e2e {
 		Assert.assertEquals(driver.findElement(By.id("divpaxinfo")).getText(), "5 Adult");
 		System.out.println(driver.findElement(By.id("divpaxinfo")).getText());
 
-		// driver.findElement(By.cssSelector("#ctl00_mainContent_btn_FindFlights")).click();
 		driver.findElement(By.cssSelector("input[value='Search']")).click();
-		// driver.findElement(By.xpath("//input[@value='Search']")).click();
-		// driver.findElement(By.name("ctl00$mainContent$btn_FindFlights")).click();
-
+		
+        // Tutup browser
+//      driver.quit();
 	}
 }

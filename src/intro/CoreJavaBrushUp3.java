@@ -23,7 +23,5 @@ public class CoreJavaBrushUp3 {
 		{
 		System.out.println(s.charAt(i));
 		}
-
 	}
-
 }

@@ -5,7 +5,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class selintro {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 		// TODO Auto-generated method stub
 		
 		//invoking browser
@@ -13,16 +13,17 @@ public class selintro {
 		//ChromeDriver driver = new ChromeDriver();
 		
 		// chromedriver.exe -> chrome browser
-		System.setProperty("webdriver.chrome.driver", "D:\\Selenium\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\amelia sari\\eclipse-workspace\\chromedriver.exe");
+		
 		// webdriver.chrome.driver -> value of path
 		WebDriver driver = new ChromeDriver();
 		
 		driver.get("https://rahulshettyacademy.com");
+		Thread.sleep(2000);
+		
 		System.out.println(driver.getTitle());
 		System.out.println(driver.getCurrentUrl());
-		// 1 tab closed
-		driver.close();
-		// all tab closed
+		
 		driver.quit();
 		
 	}
